@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#ocultarTabla {
+    display: none;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+    transform: translateX(-200px);
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}

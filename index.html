@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu desplegable</title>
+    <!-- link a estilos -->
+    <link href="style.css" rel="stylesheet">
+    <!-- link a bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- link a iconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <div class="sidebar d-flex flex-column" id="sidebar">
+            <a href="#" class="d-flex align-items-center" data-content="tabla">
+                <i class="bi bi-table"></i>
+                <span>Tabla</span>
+            </a>
+            <a href="#" class="d-flex align-items-center" data-content="lista">
+                <i class="bi bi-list"></i>
+                <span>Lista</span>
+            </a>
+            <a href="#" class="d-flex align-items-center" data-content="imagen">
+                <i class="bi bi-image"></i>
+                <span>Imagen</span>
+            </a>
+            <a href="#" class="d-flex align-items-center" data-content="otros">
+                <i class="bi bi-gear"></i>
+                <span>Parrafo</span>
+            </a>
+        </div>
+        <div class="content flex-grow-1 p-4">
+            <button id="toggleSidebar" class="btn btn-primary mb-3">
+                <i class="bi bi-list"></i>
+            </button>
+            <!-- contenido -->
+            <div id="content">
+                <h1>Titulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta illum, asperiores ipsa dolorem quae
+                    culpa veritatis. Molestias aspernatur error dolores! Earum ut nisi asperiores perferendis modi
+                    inventore suscipit odit officia.</p>
+            </div>
+            <!-- formulario para especificar filas y columnas oculto-->
+            <div id="ocultarTabla">
+                <div id="formularioTabla">
+                    <form id="tablaForm">
+                        <div class="mb-3">
+                            <label for="filas" class="form-label">Número de Filas</label>
+                            <input type="number" class="form-control" id="filas" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="columnas" class="form-label">Número de Columnas</label>
+                            <input type="number" class="form-control" id="columnas" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Crear Tabla</button>
+                    </form>
+                </div>
+                <!-- tabla -->
+                <table class="table" id="tabla"></table>
+                <!-- lista -->
+                <ul class="list-group" id="lista"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="sidebar.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
