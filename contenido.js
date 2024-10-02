@@ -18,7 +18,7 @@ export function tablaInsertar() {
             </div>
             <table class="table" id="tabla"></table>
     `;
-    
+
     // Muestra el contenido
     contentDiv.innerHTML = contenidoTabla;
 
@@ -125,4 +125,21 @@ export function parrafo() {
 
     });
 
+}
+// Función para crear la tabla
+function crearTabla(filas, columnas) {
+    const tabla = document.getElementById('tabla');
+    tabla.innerHTML = ''; // Limpiar cualquier contenido previo
+    for (let i = 0; i < filas; i++) {
+        const fila = document.createElement('tr');
+        for (let j = 0; j < columnas; j++) {
+            const celda = document.createElement('td');
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'form-control';
+            celda.appendChild(input);
+            fila.appendChild(celda);
+        }
+        tabla.appendChild(fila);
+    }
 }
