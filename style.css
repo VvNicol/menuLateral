@@ -41,3 +41,14 @@ body {
     flex-grow: 1;
     padding: 20px;
 }
+
+.imagen-limitada {
+    max-width: 10rem;
+    max-height: 50rem;
+    width: 100%; /* Para que sea responsive */
+}
+
+#parrafoEscrito {
+    height: 10rem; 
+    width: 30rem;
+}

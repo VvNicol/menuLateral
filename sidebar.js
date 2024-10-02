@@ -13,24 +13,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Agrega un evento click al botón de toggle
     toggleButton.addEventListener('click', () => {
-        // Alterna la clase 'hidden' en el sidebar para mostrarlo/ocultarlo
         sidebar.classList.toggle('hidden');
     });
 
+    // Agrega un evento click a cada enlace del sidebar
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const content = link.getAttribute('data-content');
+            updateContent(content);
+        });
+    });
+
+    // Función para actualizar el contenido
     function updateContent(content) {
         switch (content) {
             case 'tabla':
-                contentDiv.innerHTML = '<h1>Tabla</h1><p>Crea tu propia tabla.</p>';
-
+                tablaInsertar(); // Llama a la función tablaInsertar
                 break;
             case 'lista':
-                contentDiv.innerHTML = '<h1>Lista</h1><p>Contenido relacionado con la lista.</p>';
+                lista(); // Llama a la función lista pasando contentDiv
                 break;
             case 'imagen':
-                contentDiv.innerHTML = '<h1>Imagen</h1><p>Contenido relacionado con la imagen.</p>';
+                imagen();
                 break;
-            case 'otros':
-                contentDiv.innerHTML = '<h1>Parrafo</h1><p>Contenido relacionado con parrafo.</p>';
+            case 'parrafo':
+                parrafo()
                 break;
             default:
                 contentDiv.innerHTML = '<h1>Welcome to the Sidebar Menu</h1><p>Select an option from the sidebar.</p>';
@@ -39,3 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.tablaInsertar = tablaInsertar;
+window.lista = lista;
+window.imagen = imagen;
+window.parrafo = parrafo;
