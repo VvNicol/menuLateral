@@ -4,10 +4,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#ocultarTabla {
-    display: none;
-}
-
+/* Barra lateral */
 .sidebar {
     width: 200px;
     height: 100vh;
@@ -37,17 +34,18 @@ body {
     margin-right: 10px;
 }
 
+/* Contenido html */
 .content {
     flex-grow: 1;
     padding: 20px;
 }
-
+/* Imagen*/
 .imagen-limitada {
     max-width: 10rem;
     max-height: 50rem;
-    width: 100%; /* Para que sea responsive */
+    width: 100%; 
 }
-
+/* Parrafo*/
 #parrafoEscrito {
     height: 10rem; 
     width: 30rem;

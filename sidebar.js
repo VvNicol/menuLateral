@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 parrafo()
                 break;
             default:
-                contentDiv.innerHTML = '<h1>Welcome to the Sidebar Menu</h1><p>Select an option from the sidebar.</p>';
+                contentDiv.innerHTML = '<h1>Hola mundo</h1>';
         }
     }
 });

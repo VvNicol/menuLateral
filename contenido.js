@@ -18,7 +18,8 @@ export function tablaInsertar() {
             </div>
             <table class="table" id="tabla"></table>
     `;
-
+    
+    // Muestra el contenido
     contentDiv.innerHTML = contenidoTabla;
 
     // Agrega un evento de envío al formulario para crear la tabla
@@ -80,6 +81,8 @@ export function imagen() {
             <img id="imagenMostrada" src="https://img.freepik.com/vector-gratis/coleccion-flores-primavera_23-2148856484.jpg?t=st=1727888376~exp=1727891976~hmac=1774d75ad3f1efde9199e6ba69d71d209c44ac9dcbde77b0b566b8d072248ae5&w=1060" alt="Descripción de la imagen" class="img-fluid imagen-limitada">
         </div>
     `;
+
+    // Muestra el contenido
     contentDiv.innerHTML = imagenHtml;
 
     // Agregar evento al botón para mostrar la imagen
@@ -88,7 +91,7 @@ export function imagen() {
         const imagenUrl = document.getElementById('imagenUrl').value;
         const imagenMostrada = document.getElementById('imagenMostrada');
         if (imagenUrl) {
-            imagenMostrada.src = imagenUrl;
+            imagenMostrada.src = imagenUrl; //link desde input
         }
     });
 }
@@ -105,7 +108,7 @@ export function parrafo() {
     </div>
 
     <p id="parrafoMostrado" class="mt-3 font-weight-bold"></p>
-`;
+    `;
 
     contentDiv.innerHTML = parrafoHtml;
 
@@ -114,7 +117,7 @@ export function parrafo() {
         const textContenido = document.getElementById('parrafoEscrito').value;
         const textMostrar = document.getElementById('parrafoMostrado');
 
-        // Muestra el texto en el párrafo
+        // Muestra el contenido
         textMostrar.textContent = textContenido;
 
         // Limpia el textarea
